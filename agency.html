@@ -21,14 +21,92 @@
     </div>
     <h1>Leasing Motor Honda Jambi</h1>
     <p>Sales: Ary Gandol | 📍 Jl. Gr. Djamin Datuk Bagindo No.1042, Talang Banjar, Kec. Jambi Tim., Kota Jambi</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="produk.html">Produk</a>
-      <a href="promo.html">Promo</a>
-      <a href="kontak.html">Kontak</a>
-      <a href="lowongan.html">Lowongan</a>
-      <a href="agency.html">Agency</a>
-    </nav>
+  
+    <!-- NAVIGATION BAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">NSC Finance</div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Produk</a></li>
+      <li><a href="promo.html">Promo</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  /* NAVBAR */
+.navbar {
+  background: linear-gradient(90deg, #c00, #000);
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #ff3333;
+}
+
+/* MOBILE MODE */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #111;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
+</style>
+
+<script>
+document.getElementById("menu-toggle").addEventListener("click", function() {
+  document.getElementById("nav-links").classList.toggle("show");
+});
+</script>
+
   </header>
 
   <main>
